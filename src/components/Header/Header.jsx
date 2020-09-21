@@ -1,19 +1,13 @@
 import React from 'react';
+import Modal from '../Modal/Modal';
 
 function Header({handleAdd}) {
-
-    function addTarefa() {
-        handleAdd('teste')
-    }
-
     return(
         <div>
             <h1>
                 RecipeBook
             </h1>
-            <button onClick={addTarefa}>
-                New Recipe
-            </button>
+            <Modal handleAdd={handleAdd}/>
         </div>
     )
 }

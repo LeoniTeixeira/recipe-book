@@ -31,33 +31,32 @@ function Modal({handleAdd}) {
     }
     return (
         <>
-            <button onClick={() => setIsOpen(!isOpen) }>
+            <button className="modal-btn" onClick={() => setIsOpen(!isOpen) }>
                 New Recipe
             </button>
             { isOpen ?
                 <div className="blur">
                     <div className="modal">
-                        <button onClick={() => setIsOpen(!isOpen)}
-                                className="modal-btn">
+                        <button className="modal-btn-close" onClick={() => setIsOpen(!isOpen)}>
                             Fechar
                         </button>
-                        <div>
+                        <div className="modal-image-area">
                             <label htmlFor="imageURL" >Image URL</label>
                             <input id="imageURL" className="modal-input" onChange={listenImageURL} value={imageURL} type="text"/>
                         </div>
-                        <div>
+                        <div className="modal-input-area">
                             <label htmlFor="recipeName" > Recipe Name</label>
                             <input id="recipeName" className="modal-input" onChange={listenRecipeName} value={recipeName} type="text"/>
                             <label htmlFor="ingredients" >Ingredients</label>
                             <input id="ingredients" className="modal-input" onChange={listenIngredients} value={ingredients} type="text"/>
                             <label htmlFor="instructions" >Instructions</label>
                             <input id="instructions" className="modal-input" onChange={listenInstructions} value={instructions} type="text"/>
-                            <button onClick={addTarefa}>Add Recipe</button>
+                            <button className="modal-input-btn" onClick={addTarefa}>Add Recipe</button>
                         </div>
                     </div>  
                 </div>
                 :
-                <div/>
+                <div className="display-none"/>
             }
         </>
     )

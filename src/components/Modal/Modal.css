@@ -11,13 +11,27 @@
 .modal {
     width: 95vw;
     height: 95vh;
-    background: whitesmoke;
+    background: #7a3a67;
     position: absolute;
     margin-left: 2.5vw;
     margin-top: 2.5vh;
+    display: flex;
 }
 
-.modal-btn {
+.modal-btn{
+    background: #581845;
+    border: none;
+    color: white;
+    box-shadow: 2px 2px 8px black;
+}
+
+.modal-btn:hover{
+    background: #692956;
+    color: #ccc;
+    box-shadow: 2px 2px 6px #333;
+}
+
+.modal-btn-close {
     margin: 1rem;
     right: 0;
     position: absolute;
@@ -28,13 +42,38 @@
     color: white;
 }
 
-.modal-btn:hover{
+.modal-btn-close:hover{
     background: rgb(206, 14, 14);
     border: 2px solid rgb(206, 14, 14);
+}
+
+.modal-input-area{
+    display: flex;
+    flex-direction: column;
+    margin: auto 4vw;
+    color: white;
+}
+
+.modal-image-area{
+    display: flex;
+    flex-direction: column;
+    margin: auto 4vw;
+    color: white;
 }
 
 .modal-input{
     border-radius: 0.3rem;
     padding: 0.3rem;
-    margin: 0.5rem;
+    margin: 1rem;
+    width: 35vw;
+}
+
+.modal-input-btn{
+    width: 12vw;
+    padding: 0.5rem;
+    margin: 2rem auto 0;
+}
+
+.display-none{
+    display: none;
 }

@@ -1,0 +1,14 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    background: #900c3f;
+    padding: 2rem;
+    box-shadow: 2px 4px 16px black;
+}
+
+.logo{
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+    text-shadow: 2px 3px 4px black;
+}

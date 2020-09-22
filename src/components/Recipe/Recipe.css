@@ -1,0 +1,8 @@
+.recipe{
+    width: 20rem;
+    height: 12rem;
+    padding: 1rem;
+    background: tomato;
+    margin: 2rem auto;
+    box-shadow: 4px 4px 12px black;
+}

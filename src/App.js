@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from './components/Header/Header';
 import ListRecipes from './components/ListRecipes/ListRecipes'
 import IndexedDB from './data/IndexedDB';
+import './App.css'
 
 function App() {
   const [recipeList, setRecipeList] = useState([])

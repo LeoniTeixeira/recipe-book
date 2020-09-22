@@ -37,7 +37,8 @@
     position: absolute;
     border: 2px solid red;
     border-radius: 0.3rem;
-    padding: 0.2rem 0.3rem;
+    width: 4rem;
+    height: 2rem;
     background: red;
     color: white;
 }

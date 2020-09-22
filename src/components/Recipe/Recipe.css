@@ -2,7 +2,55 @@
     width: 20rem;
     height: 12rem;
     padding: 1rem;
-    background: tomato;
+    background: #c70039;
     margin: 2rem auto;
+    border-radius: 8px;
     box-shadow: 4px 4px 12px black;
+    text-shadow: 1px 1px 1px black;
+    color: white;
+    text-align: center;
 }
+
+.show-recipe-btn{
+    position: relative;
+    bottom: -8.5rem;
+    right: -8rem;
+    border: none;
+    width: 4rem;
+    height: 1.5rem;
+    color: white;
+    background: #ccc;
+}
+
+.show-recipe-btn:hover{
+    background: white;
+    box-shadow: 0 0 2rem yellow;
+    color: #aaa;
+}
+
+.recipe-name{
+    margin: 0;
+}
+
+.modal-recipe-area{
+    color: white;
+    padding: 2rem;
+}
+
+.delete-btn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    width: 4rem;
+    height: 2rem;
+    background: black;
+}
+
+.delete-btn:hover{
+    background: #222;
+}
+

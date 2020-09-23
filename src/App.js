@@ -16,11 +16,15 @@ function App() {
       setRequest(true)
     })
   }
-  function handleAdd(recipeName, ingredients, instruction, imageURL) {
+  function handleAdd(recipeName, mealType, numberPeople,
+     difficulty, ingredients, instructions, imageURL) {
     const newRecipe = {
       recipeName,
-      ingredients,
-      instruction,
+      mealType, 
+      numberPeople, 
+      difficulty, 
+      ingredients, 
+      instructions, 
       imageURL
     };
     IndexedDB.table('recipe')

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Input from '../InputArea/Input';
 
 // import { Container } from './styles';
 import './Modal.css';
@@ -6,28 +7,20 @@ import './Modal.css';
 function Modal({handleAdd}) {
     const [ isOpen, setIsOpen ] = useState(false)
     const [ recipeName, setRecipeName ] = useState('')
+    const [ mealType, setMealType ] = useState('') 
+    const [ numberPeople, setNumberPeople ] = useState('') 
+    const [ difficulty, setDifficulty ] = useState('')
     const [ ingredients, setIngredients ] = useState('')
     const [ instructions, setInstructions ] = useState('')
     const [ imageURL, setImageURL ] = useState('')
+
     const addTarefa = () => {
-        handleAdd(recipeName, ingredients, instructions, imageURL)
+    handleAdd(recipeName, mealType, numberPeople, difficulty, ingredients, instructions, imageURL)
         setRecipeName('')
         setIngredients('')
         setInstructions('')
         setImageURL('')
         setIsOpen(false)
-    }
-    const listenRecipeName = (e) => {
-        setRecipeName(e.target.value)
-    }
-    const listenIngredients = (e) => {
-        setIngredients(e.target.value)
-    }
-    const listenInstructions = (e) => {
-        setInstructions(e.target.value)
-    }
-    const listenImageURL = (e) => {
-        setImageURL(e.target.value)
     }
     return (
         <>
@@ -41,16 +34,15 @@ function Modal({handleAdd}) {
                             Fechar
                         </button>
                         <div className="modal-image-area">
-                            <label htmlFor="imageURL" >Image URL</label>
-                            <input id="imageURL" className="modal-input" onChange={listenImageURL} value={imageURL} type="text"/>
+                            <Input label={'Image URL'} setItem={setImageURL} Item={imageURL}/>
                         </div>
                         <div className="modal-input-area">
-                            <label htmlFor="recipeName" > Recipe Name</label>
-                            <input id="recipeName" className="modal-input" onChange={listenRecipeName} value={recipeName} type="text"/>
-                            <label htmlFor="ingredients" >Ingredients</label>
-                            <input id="ingredients" className="modal-input" onChange={listenIngredients} value={ingredients} type="text"/>
-                            <label htmlFor="instructions" >Instructions</label>
-                            <input id="instructions" className="modal-input" onChange={listenInstructions} value={instructions} type="text"/>
+                            <Input label={'Recipe Name'} setItem={setRecipeName} Item={recipeName}/>
+                            <Input label={'Meal Type'} setItem={setMealType} Item={mealType}/>
+                            <Input label={'Number of people it serves'} setItem={setNumberPeople} Item={numberPeople}/>
+                            <Input label={'Difficulty Level'} setItem={setDifficulty} Item={difficulty}/>
+                            <Input label={'Ingredients'} setItem={setIngredients} Item={ingredients}/>
+                            <Input label={'Instructions'} setItem={setInstructions} Item={instructions}/>
                             <button className="modal-input-btn" onClick={addTarefa}>Add Recipe</button>
                         </div>
                     </div>  

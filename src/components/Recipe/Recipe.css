@@ -12,8 +12,9 @@
 }
 
 .show-recipe-btn{
+    z-index: 0;
     position: relative;
-    bottom: -8.5rem;
+    bottom: 0;
     right: -8rem;
     border: none;
     width: 4rem;
@@ -29,12 +30,25 @@
 }
 
 .recipe-name{
-    margin: 0;
+    margin: 1rem 0;
+    text-align: center;
 }
 
 .modal-recipe-area{
-    color: white;
-    padding: 2rem;
+    background: whitesmoke;
+    margin: 2rem;
+    padding: 0 2rem;
+    border-radius: 5px;
+    width: 40vw;
+    box-shadow: 2px 2px 12px black;
+}
+
+.recipe-image{
+    width: 35vw;
+    height: 35vw;
+    margin: auto 0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 12px black;
 }
 
 .delete-btn{

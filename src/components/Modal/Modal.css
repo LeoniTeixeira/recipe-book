@@ -9,6 +9,7 @@
 }
 
 .modal {
+    z-index: 1;
     width: 95vw;
     height: 95vh;
     background: #7a3a67;
